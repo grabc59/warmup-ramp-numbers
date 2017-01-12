@@ -11,8 +11,10 @@
 // true if the input is a ramp number, false if it is not
 'use strict';
 function isRampNumber(n){
+
 let stringN = n.toString();
 let last = '0';
+
 // loop through the digits in the Input
 for (var i = 0; i < stringN.length; i++) {
   // test the current digit against the last digits
@@ -30,5 +32,9 @@ for (var i = 0; i < stringN.length; i++) {
 console.log('true');
 return true;
 }
-isRampNumber(1234); // ramp number - expect true
-isRampNumber(10234); // not a ramp - expect false
+// isRampNumber(1234); // ramp number - expect true
+// isRampNumber(10234); // not a ramp - expect false
+
+module.exports = {
+  isRampNumber: isRampNumber
+};
