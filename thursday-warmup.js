@@ -17,14 +17,18 @@ let last = '0';
 for (var i = 0; i < stringN.length; i++) {
   // test the current digit against the last digits
   if (stringN[i] >= last) {
+    // the current number is greater than the last number. continue the loop
+    // set the current number to the last number for the next comparison.
     last = stringN[i];
-    // continue the loop
   } else {
+    // the current number is less than the previous number
     console.log('false');
     return false;
   }
 }
+// when the loop has gone through all the digits and it hasn't returned false, the number must be a ramp
 console.log('true');
 return true;
 }
-isRampNumber(1234);
+isRampNumber(1234); // ramp number - expect true
+isRampNumber(10234); // not a ramp - expect false
